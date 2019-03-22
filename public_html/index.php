@@ -3,7 +3,7 @@
 <html lang="dk">
     <head>
         <meta charset="UTF-8">
-        <title>Hjem</title>
+        <title>Intra</title>
         <link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="libs/font-awesome/css/all.css">
         <link rel="stylesheet" href="/css/style.css">
@@ -24,9 +24,10 @@
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Kodeord</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Kodeord">
+                            <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Kodeord">
                         </div>
-                        <button type="button" class="btn btn-success container" style="margin-top: 20px">Success</button>
+                        <button type="button" class="btn btn-success container" style="margin-top: 20px" onclick="location.href='/news'">Success</button>
+
                     </form>
                 </div>
             </div>
@@ -35,6 +36,7 @@
     </div>
 
     </body>
+
 
 </html>
 
