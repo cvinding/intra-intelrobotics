@@ -1,4 +1,8 @@
 
+body{
+    overflow-x: hidden;
+}
+
 .loginbox{
     margin: 0;
     position: absolute;
@@ -15,4 +19,7 @@
     width: 300px;
     padding: 30px;
     background-color: #585858;
+}
+.newsbox{
+    margin: 30px;
 }

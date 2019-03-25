@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="dk">
 <head>
@@ -9,34 +10,36 @@
 </head>
 <body>
 
-
-
-
-
 <div class="">
     <div class="row">
         <div class="col-md-4">
             <?php require_once "../templates/navbar.html"; ?>
             <!-- Content -->
         </div>
-        <div class="col-md-6" style="margin-top: 100px; margin-bottom: 100px">
+        <div class="col-md-4" style="margin-top: 100px; margin-bottom: 100px">
             <!-- Content -->
-            <h1>Brugeradministration</h1>
+            <h1>Opret nyheder</h1>
 
-            <div class="input-group" style="margin-top: 70px">
-                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                <div class="input-group-append">
-                    <button class="btn btn-success" type="button">Søg</button>
+            <form>
+                <div class="form-group" style="margin-top: 100px">
+                    <label for="formGroupExampleInput">Nyheds titel</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
                 </div>
-            </div>
+            </form>
+            <label for="formGroupExampleInput">Beskrivelse</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style"min-height: 350px"></textarea>
 
-            <textarea disabled class="form-control" id="exampleFormControlTextarea1" rows="5" style="margin-top: 100px; min-height: 300px" placeholder="Resultatet vises her"></textarea>
+            <div class="row" style="margin-top: 1px; float: right">
+                <button type="button" class="btn btn-primary btn-sm" style="margin-left: 1px">Gem</button>
+            </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4">
             <!-- Content -->
         </div>
     </div>
 </div>
+
+
 
 </body>
 
