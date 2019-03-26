@@ -23,3 +23,21 @@ body{
 .newsbox{
     margin: 30px;
 }
+.rownews{
+    margin-left: 5px;
+    margin-right: 20px;
+}
+.spanleft{
+    float:left;
+}
+.spanright{
+    float:right;
+}
+.abouttextbox{
+    margin-top: 100px;
+    min-height: 350px;
+}
+.buttonrow{
+    margin-top: 1px;
+    float: left;
+}
