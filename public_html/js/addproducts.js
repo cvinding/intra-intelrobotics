@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
 
-    $("#add-news").click(function (e) {
+    $("#add-products").click(function (e) {
         e.preventDefault();
 
         const form = $($(this).parent("form"));
@@ -11,9 +11,9 @@ $(document).ready(function () {
 
         if(!checkRequired(form, "Vigtigt","Skriv lige i felterne", uiBox)) {
 
-            request("/api/info/createNews", "POST", form.serialize() + "&webDomain=" + webdomain(), function (callback) {
+            request("/api/info/createProduct", "POST", form.serialize() + "&webDomain=" + webdomain(), function (callback) {
 
-                uiBox.html(createDismissibleMessage("success", "Nyheden er gemt", "Du gjorde det"))
+                uiBox.html(createDismissibleMessage("success", "Produkter er gemt", "Du gjorde det"))
 
                 form[0].reset();
             })
@@ -21,7 +21,5 @@ $(document).ready(function () {
         }
 
     });
-
-
 
 });

@@ -20,18 +20,22 @@
             <!-- Content -->
             <h1>Opret produkter</h1>
 
-            <form>
-                <div class="form-group" style="margin-top: 100px">
-                    <label for="formGroupExampleInput">Produkt titel</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
-                </div>
-            </form>
-            <label for="formGroupExampleInput">Beskrivelse</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style"min-height: 350px"></textarea>
+            <form method="post"  style="margin-top: 100px">
 
-            <div class="row" style="margin-top: 1px; float: right">
-                <button type="button" class="btn btn-primary btn-sm" style="margin-left: 1px">Gem</button>
-            </div>
+                <div class="ui-message">
+                </div>
+
+                <div class="form-group">
+                    <label for="products-title">Produkt titel *</label>
+                    <input required="required" type="text" class="form-control" name="products-title" id="products-title" placeholder="Title">
+                </div>
+
+                <label for="product-desc">Beskrivelse *</label>
+                <textarea required="required" class="form-control" name="product-desc" id="product-desc" rows="5" style"min-height: 350px"></textarea>
+
+                <button type="submit" id="add-products" class="btn btn-primary btn-sm" style="margin-left: 1px margin-top: 1px; float: right;">Gem</button>
+
+            </form>
         </div>
         <div class="col-md-4">
             <!-- Content -->

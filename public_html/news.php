@@ -17,7 +17,7 @@
             <div class="col-md-4">
                 <?php require_once "../templates/navbar.html"; ?>
             </div>
-            <div class="col-md-6 container" style="margin-top: 100px; margin-bottom: 100px">
+            <div class="col-md-6" style="margin-top: 100px; margin-bottom: 100px">
                 <h1 style="text-align: center">Nyheder</h1>
             <div id="news-output">
                 <!--
