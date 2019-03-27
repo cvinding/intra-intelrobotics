@@ -9,22 +9,19 @@ $(document).ready(function () {
         const uiBox = $(form.children(".ui-message"));
 
         if(!checkRequired(form, "Vigtigt","Skriv lige i felterne", uiBox)) {
-            console.log(form.serialize() + "&webDomain=" + webdomain());
 
-            $.ajax({
-                type: "POST",
-                url: apiURL() + "/api/info/createNews",
-                data: form.serialize(),
-                success: function(result){
+            request("/api/info/createNews", "POST", form.serialize() + "&webDomain=" + webdomain(), function (callback) {
 
-                },
-                error: function (result) {
-                    console.log(result);
-                }
-            });
+                uiBox.html(createDismissibleMessage("success", "Tilløk", "Du gjorde det"))
+                
+            })
 
 
         }
+
+
+
+        /**/
 
     });
 
