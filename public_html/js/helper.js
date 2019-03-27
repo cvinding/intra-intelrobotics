@@ -34,7 +34,7 @@ $(document).ready(function () {
     request= function (endpoint, method, data, callback) {
 
         const token = getCookie("token");
-        console.log(token);
+
         $.ajax({
             type: method,
             headers: {"Authorization" : "Bearer " + token},

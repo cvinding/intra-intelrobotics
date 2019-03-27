@@ -68,19 +68,28 @@ $(document).ready(function(){
 
         const output = $("#editnews-output");
         output.html("");
-        console.log(result);
 
         for (let i = 0; i<result.news["internal"].length; i++){
 
-            output.append(createEditNews(result.news["internal"][i].title, result.news["internal"][i].description, result.news["internal"][i].updated, result.news["internal"][i].author));
+            output.append(createEditNews(result.news["internal"][i].title, result.news["internal"][i].description, result.news["internal"][i].updated, result.news["internal"][i].author, result.news["internal"][i].id));
         }
 
         for (let i = 0; i<result.news["external"].length; i++){
 
-            output.append(createEditNews(result.news["external"][i].title, result.news["external"][i].description, result.news["external"][i].updated, result.news["external"][i].author));
+            output.append(createEditNews(result.news["external"][i].title, result.news["external"][i].description, result.news["external"][i].updated, result.news["external"][i].author, result.news["external"][i].id));
         }
-    })
 
+        setOnClickEvent();
+    });
 
+    function setOnClickEvent() {
+        $(".delete-news").click(function (e) {
+            e.preventDefault();
+
+            const id = $(this)[0].id;
+
+            console.log(id);
+        });
+    }
 
 });
