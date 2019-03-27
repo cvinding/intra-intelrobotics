@@ -20,7 +20,7 @@
             <!-- Content -->
             <h1>Opret nyheder</h1>
 
-            <form>
+            <form method="post">
                 <div class="form-group" style="margin-top: 100px">
                     <label for="formGroupExampleInput">Nyheds titel</label>
                     <input type="text" class="form-control" name="news-title" id="news-title" placeholder="Title">
@@ -29,14 +29,14 @@
                 <label for="formGroupExampleInput">Beskrivelse</label>
                 <textarea class="form-control" name="news-desc" id="news-desc" rows="5" style"min-height: 350px"></textarea>
 
-                <select multiple class="form-control" id="exampleFormControlSelect2" style="max-height: 60px; margin-top: 2px; margin-bottom: 2px">
-                    <option>Internal</option>
-                    <option>External</option>
+                <select required="required" class="form-control" name="selecter" id="exampleFormControlSelect2" style="max-height: 60px; margin-top: 2px; margin-bottom: 2px">
+                    <option disabled selected="selected">Vælg noget</option>
+                    <option value="0">External</option>
+                    <option value="1">Internal</option>
                 </select>
 
-                <div class="row" style="margin-top: 1px; float: right">
-                    <button type="button" id="add-news" class="btn btn-primary btn-sm" style="margin-left: 1px">Gem</button>
-                </div>
+                <button type="submit" id="add-news" class="btn btn-primary btn-sm" style="margin-left: 1px margin-top: 1px; float: right;">Gem</button>
+
             </form>
         </div>
         <div class="col-md-4">
@@ -59,3 +59,4 @@
 <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/js/helper.js"></script>
 <script src="/js/auth.js"></script>
+<script src="/js/addnews.js"></script>
