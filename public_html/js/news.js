@@ -44,7 +44,7 @@ $(document).ready(function(){
         return card;
     }
 
-    request("api/info/getExtNews/20/300/3/" + webdomain(), "GET", "", function (result) {
+    request("/api/info/getIntNews/20/300/3/" + webdomain(), "GET", "", function (result) {
 
         const output = $("#news-output");
         output.html("");

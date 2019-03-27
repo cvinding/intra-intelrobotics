@@ -64,7 +64,7 @@ $(document).ready(function(){
         return card;
     }
 
-    request("api/info/getNews/50/300/" + webdomain(), "GET", "", function (result) {
+    request("/api/info/getNews/50/300/" + webdomain(), "GET", "", function (result) {
 
         const output = $("#editnews-output");
         output.html("");

@@ -33,11 +33,12 @@ $(document).ready(function () {
     //Request to API
     request= function (endpoint, method, data, callback) {
 
-        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcGkuaW50ZWxyb2JvdGljcy5jb20iLCJzdWIiOiJVc2VyIEF1dGhvcml6YXRpb24gVG9rZW4iLCJhdWQiOiJhcGkuaW50ZWxyb2JvdGljcy5jb20iLCJleHAiOjE1NTM2OTAxMzksIm5iZiI6MTU1MzY3MjEzOSwiaWF0IjoxNTUzNjcyMTM4LCJqdGkiOjE3NDg0LCJ1aWQiOiJ0byIsInNlY3VyaXR5X2dyb3VwcyI6WyJBZG1pbmlzdHJhdGlvbl9TRyIsIklUX1NHIl19.EvVSJVFSc2XEHf3-58ycjpE64RSDQdbOk4xa9S8mdc0";
+        const token = getCookie("token");
+        console.log(token);
         $.ajax({
             type: method,
             headers: {"Authorization" : "Bearer " + token},
-            url: webURL() + endpoint,
+            url: apiURL() + endpoint,
             data: data,
             success: function (result) {
                 callback(result)

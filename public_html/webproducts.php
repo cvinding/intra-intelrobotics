@@ -23,6 +23,7 @@
             <!-- Content -->
             <h1>Vis eller redigere produkter</h1>
             <div id="product-output">
+                <!--
                 <div class="card" style="margin-top: 70px">
                     <div class="card-body">
                         <h4 class="card-title">Card title</h4>
@@ -64,6 +65,7 @@
                     <button type="button" class="btn btn-primary btn-sm">Rediger</button>
                     <button type="button" class="btn btn-primary btn-sm" style="margin-left: 1px">Gem</button>
                 </div>
+            -->
             </div>
         </div>
         <div class="col-md-2">
@@ -86,3 +88,4 @@
 <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/js/helper.js"></script>
 <script src="/js/editproduct.js"></script>
+<script src="/js/auth.js"></script>

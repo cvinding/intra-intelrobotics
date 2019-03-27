@@ -20,8 +20,9 @@
             <!-- Content -->
             <h1>Virksomhedsinfo</h1>
             <div id="aboutbox">
+                <!--
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="margin-top: 100px; min-height: 350px"></textarea>
-
+                -->
 
             </div>
             <div class="row" style="margin-top: 1px; float: right">
@@ -51,3 +52,4 @@
 <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/js/helper.js"></script>
 <script src="/js/about.js"></script>
+<script src="/js/auth.js"></script>

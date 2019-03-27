@@ -23,15 +23,21 @@
             <form>
                 <div class="form-group" style="margin-top: 100px">
                     <label for="formGroupExampleInput">Nyheds titel</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
+                    <input type="text" class="form-control" name="news-title" id="news-title" placeholder="Title">
+                </div>
+
+                <label for="formGroupExampleInput">Beskrivelse</label>
+                <textarea class="form-control" name="news-desc" id="news-desc" rows="5" style"min-height: 350px"></textarea>
+
+                <select multiple class="form-control" id="exampleFormControlSelect2" style="max-height: 60px; margin-top: 2px; margin-bottom: 2px">
+                    <option>Internal</option>
+                    <option>External</option>
+                </select>
+
+                <div class="row" style="margin-top: 1px; float: right">
+                    <button type="button" id="add-news" class="btn btn-primary btn-sm" style="margin-left: 1px">Gem</button>
                 </div>
             </form>
-            <label for="formGroupExampleInput">Beskrivelse</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style"min-height: 350px"></textarea>
-
-            <div class="row" style="margin-top: 1px; float: right">
-                <button type="button" class="btn btn-primary btn-sm" style="margin-left: 1px">Gem</button>
-            </div>
         </div>
         <div class="col-md-4">
             <!-- Content -->
@@ -52,3 +58,4 @@
 <script src="libs/popper/popper.min.js"></script>
 <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/js/helper.js"></script>
+<script src="/js/auth.js"></script>

@@ -64,7 +64,7 @@ $(document).ready(function(){
     }
 
 
-    request("api/info/getProducts/" + webdomain(), "GET", "", function (result) {
+    request("/api/info/getProducts/" + webdomain(), "GET", "", function (result) {
 
         const output = $("#product-output");
         output.html("");

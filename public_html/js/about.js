@@ -49,7 +49,7 @@ $(document).ready(function(){
     *
     * */
 
-    request("api/info/getAbout/" + webdomain(), "GET", "", function (result) {
+    request("/api/info/getAbout/" + webdomain(), "GET", "", function (result) {
 
         const output = $("#aboutbox");
         output.html("");

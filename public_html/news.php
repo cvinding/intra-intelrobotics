@@ -20,6 +20,7 @@
             <div class="col-md-6 container" style="margin-top: 100px; margin-bottom: 100px">
                 <h1 style="text-align: center">Nyheder</h1>
             <div id="news-output">
+                <!--
                 <div class="card newsbox">
                     <div class="card-body">
                         <h4 class="card-title">Card title</h4>
@@ -88,7 +89,8 @@
             </div>
             </div>
             <div class="col-md-2">
-                <!-- Content -->
+                --><!-- Content -->
+
             </div>
         </div>
     </div>
@@ -105,5 +107,5 @@
 <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/js/helper.js"></script>
 <script src="/js/news.js"></script>
-<script src="/js/Auth.js"></script>
+<script src="/js/auth.js"></script>
 
