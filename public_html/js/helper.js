@@ -6,12 +6,12 @@ $(document).ready(function () {
         return "DK";
     }
 
-    weburl= function () {
-        return "http://intelrobotics.local/";
+    webURL= function () {
+        return "http://intra.intelrobotics.local";
     };
 
-    apiurl = function () {
-        return "http://api.intelrobotics.local/";
+    apiURL = function () {
+        return "http://api.intelrobotics.local";
     };
 
     getCookie = function(cookieName) {
@@ -33,11 +33,11 @@ $(document).ready(function () {
     //Request to API
     request= function (endpoint, method, data, callback) {
 
-        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcGkuaW50ZWxyb2JvdGljcy5sb2NhbCIsInN1YiI6IlVzZXIgQXV0aG9yaXphdGlvbiBUb2tlbiIsImF1ZCI6ImFwaS5pbnRlbHJvYm90aWNzLmxvY2FsIiwiZXhwIjoxNTUzNjA2Njg1LCJuYmYiOjE1NTM1ODg2ODUsImlhdCI6MTU1MzU4ODY4NCwianRpIjoyNzM1LCJ1aWQiOiJ0byIsImNvbXBhbnlfZ3JvdXAiOlsiSFIiXX0.EiW_is2KXRD0P4seVgDqlyK8sXI6g4Fnzuy2IGg8k1M";
+        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcGkuaW50ZWxyb2JvdGljcy5jb20iLCJzdWIiOiJVc2VyIEF1dGhvcml6YXRpb24gVG9rZW4iLCJhdWQiOiJhcGkuaW50ZWxyb2JvdGljcy5jb20iLCJleHAiOjE1NTM2OTAxMzksIm5iZiI6MTU1MzY3MjEzOSwiaWF0IjoxNTUzNjcyMTM4LCJqdGkiOjE3NDg0LCJ1aWQiOiJ0byIsInNlY3VyaXR5X2dyb3VwcyI6WyJBZG1pbmlzdHJhdGlvbl9TRyIsIklUX1NHIl19.EvVSJVFSc2XEHf3-58ycjpE64RSDQdbOk4xa9S8mdc0";
         $.ajax({
             type: method,
             headers: {"Authorization" : "Bearer " + token},
-            url: apiurl() + endpoint,
+            url: webURL() + endpoint,
             data: data,
             success: function (result) {
                 callback(result)

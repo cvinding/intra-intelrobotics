@@ -20,14 +20,14 @@
                     <form class="login">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Brugernavn</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Brugernavn">
+                            <input type="text" class="form-control" id="username-input" placeholder="Brugernavn">
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Kodeord</label>
-                            <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Kodeord">
+                            <input type="password" class="form-control" id="password-input" placeholder="Kodeord">
                         </div>
-                        <button type="button" class="btn btn-success container" style="margin-top: 20px" onclick="location.href='/news'">Success</button>
-
+                        <button type="button" id="submit-login" class="btn btn-success container" style="margin-top: 20px">Success</button>
+<!-- onclick="location.href='/news'"-->
                     </form>
                 </div>
             </div>
@@ -43,3 +43,5 @@
 <script src="libs/jquery/jquery-3.3.1.min.js"></script>
 <script src="libs/popper/popper.min.js"></script>
 <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script src="js/helper.js"></script>
+<script src="js/login.js"></script>
