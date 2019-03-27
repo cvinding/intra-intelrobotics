@@ -96,15 +96,14 @@ $(document).ready(function(){
 
             console.log(id);
 
-            $(".delete-news").on("click", showModal);
+            showModal();
 
-            $(".delete-yes").click(function (e) {
+            $("#delete-yes").click(function (e) {
                 e.preventDefault();
 
-                const id = $(this)[0].id;
-                id.split("-")[1];
+                let newsid = id.split("-")[1];
 
-                request("/api/info/deleteNews", "POST", "id=" + id, function (result) {
+                request("/api/info/deleteNews", "POST", "id=" + newsid, function (result) {
 
 
                 });
