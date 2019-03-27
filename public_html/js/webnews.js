@@ -68,7 +68,6 @@ $(document).ready(function(){
 
         const output = $("#editnews-output");
         output.html("");
-        console.log(result);
 
         for (let i = 0; i<result.news["internal"].length; i++){
 
@@ -79,8 +78,39 @@ $(document).ready(function(){
 
             output.append(createEditNews(result.news["external"][i].title, result.news["external"][i].description, result.news["external"][i].updated, result.news["external"][i].author, result.news["external"][i].id));
         }
-    })
+
+        setOnClickEvent();
+    });
+
+    function showModal() {
+
+        $("#newsmodal").modal('show');
+
+    }
+
+    function setOnClickEvent() {
+        $(".delete-news").click(function (e) {
+            e.preventDefault();
+
+            const id = $(this)[0].id;
+
+            console.log(id);
+
+            $(".delete-news").on("click", showModal);
+
+            $(".delete-yes").click(function (e) {
+                e.preventDefault();
+
+                const id = $(this)[0].id;
+                id.split("-")[1];
+
+                request("/api/info/deleteNews", "POST", "id=" + id, function (result) {
 
 
+                });
+
+            });
+        });
+    }
 
 });
