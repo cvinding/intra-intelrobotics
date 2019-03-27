@@ -87,6 +87,12 @@ $(document).ready(function () {
         return div;
     };
 
+    checkRequired = function(form, msg, msgOut){
+
+        var formChildren = form.find('inpu')
+    };
+
+
 
     $("#mainnavbar> nav > ul > li > a").each(function (e, t) {
 

@@ -30,7 +30,7 @@
                 <textarea class="form-control" name="news-desc" id="news-desc" rows="5" style"min-height: 350px"></textarea>
 
                 <select required="required" class="form-control" name="selecter" id="exampleFormControlSelect2" style="max-height: 60px; margin-top: 2px; margin-bottom: 2px">
-                    <option disabled selected="selected">Vælg noget</option>
+                    <option disabled="disabled" selected="selected" value="">Vælg noget</option>
                     <option value="0">External</option>
                     <option value="1">Internal</option>
                 </select>

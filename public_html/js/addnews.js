@@ -8,7 +8,7 @@ $(document).ready(function () {
         const uiBox = $(form.children(".ui-message"));
 
 
-        console.log(form.serialize());
+        console.log(form.serialize()+"&webdomain=" + webdomain());
         /*
         $.ajax({
             type: "POST",
