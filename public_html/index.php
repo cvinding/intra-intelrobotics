@@ -20,13 +20,13 @@
                     <form class="login">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Brugernavn</label>
-                            <input type="text" class="form-control" id="username-input" placeholder="Brugernavn">
+                            <input type="text" class="form-control" name="username-input" id="username-input" placeholder="Brugernavn">
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Kodeord</label>
-                            <input type="password" class="form-control" id="password-input" placeholder="Kodeord">
+                            <input type="password" class="form-control" name="password-input" id="password-input" placeholder="Kodeord">
                         </div>
-                        <button type="button" id="submit-login" class="btn btn-success container" style="margin-top: 20px">Success</button>
+                        <button type="button" id="submit-login" name="submit-login" class="btn btn-success container" style="margin-top: 20px">Login</button>
 <!-- onclick="location.href='/news'"-->
                     </form>
                 </div>

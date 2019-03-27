@@ -33,7 +33,7 @@ $(document).ready(function () {
     $("#submit-login").click(function (e) {
         e.preventDefault();
 
-        const form = $($($(this).parent()).parent("form"));
+        const form = $($(this).parent("form"));
 
         const uiBox = $(form.children(".ui-message"));
 
@@ -81,7 +81,7 @@ $(document).ready(function () {
         document.cookie = "username=" + username;
 
         setTimeout(function () {
-            window.location = webURL() + "/admin";
+            window.location = webURL() + "/news";
         }, 2000);
 
         output("Du er ved at blive logged ind", true);

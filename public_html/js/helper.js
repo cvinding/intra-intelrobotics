@@ -48,6 +48,45 @@ $(document).ready(function () {
         })
     }
 
+
+    /**
+     * createDismissibleMessage() is used for creating a dismissible bootstrap message
+     * @param type
+     * @param strongMsg
+     * @param message
+     * @returns {HTMLElement}
+     */
+    createDismissibleMessage = function (type, strongMsg, message) {
+        // Create the strong part of the message
+        let strong = document.createElement("strong");
+        strong.append(strongMsg);
+
+        // Create the span part of the message
+        let span = document.createElement("span");
+        span.setAttribute("aria-hidden", true);
+        span.innerHTML = "&times;";
+
+        // Create the button part of the message
+        let button = document.createElement("button");
+        button.type = "button";
+        button.className = "close";
+        button.setAttribute("data-dismiss", "alert");
+        button.setAttribute("aria-label","Close");
+        button.append(span);
+
+        // Create the div part of the message
+        let div = document.createElement("div");
+        div.className = "alert alert-" + type + " alert-dismissible fade show";
+        div.role = "alert";
+        div.append(button);
+        div.append(strong);
+        div.append(" " + message + "\n");
+
+        // Return all elements appended to the div
+        return div;
+    };
+
+
     $("#mainnavbar> nav > ul > li > a").each(function (e, t) {
 
         if (t.href === window.location.href){
