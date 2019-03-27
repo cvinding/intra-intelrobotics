@@ -20,17 +20,22 @@
             <!-- Content -->
             <h1>Opret nyheder</h1>
 
-            <form method="post">
-                <div class="form-group" style="margin-top: 100px">
-                    <label for="formGroupExampleInput">Nyheds titel</label>
-                    <input type="text" class="form-control" name="news-title" id="news-title" placeholder="Title">
+            <form method="post"  style="margin-top: 100px">
+
+                <div class="ui-message">
                 </div>
 
-                <label for="formGroupExampleInput">Beskrivelse</label>
-                <textarea class="form-control" name="news-desc" id="news-desc" rows="5" style"min-height: 350px"></textarea>
+                <div class="form-group">
+                    <label for="news-title">Nyheds titel *</label>
+                    <input required="required" type="text" class="form-control" name="news-title" id="news-title" placeholder="Title">
+                </div>
 
-                <select required="required" class="form-control" name="selecter" id="exampleFormControlSelect2" style="max-height: 60px; margin-top: 2px; margin-bottom: 2px">
-                    <option disabled selected="selected">Vælg noget</option>
+                <label for="news-desc">Beskrivelse *</label>
+                <textarea required="required" class="form-control" name="news-desc" id="news-desc" rows="5" style"min-height: 350px"></textarea>
+
+                <label for="select-internal">Vælg intern / ekstern *</label>
+                <select required="required" class="form-control" name="select-internal" id="select-internal" style="max-height: 60px; margin-top: 2px; margin-bottom: 2px">
+                    <option value="" disabled="disabled" selected="selected">Vælg noget</option>
                     <option value="0">External</option>
                     <option value="1">Internal</option>
                 </select>

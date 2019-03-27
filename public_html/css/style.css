@@ -41,3 +41,8 @@ body{
     margin-top: 1px;
     float: left;
 }
+
+
+.required-field {
+    color: #cf0000;
+}

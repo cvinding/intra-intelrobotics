@@ -96,4 +96,26 @@ $(document).ready(function () {
     })
 
 
+    checkRequired = function(form, title, msg, msgOut){
+        var formChildren = form.find(':input');
+        var toReturn = 0;
+        $("label").removeClass("required-field");
+        for(var i = 0; i < formChildren.length; i++){
+            if(formChildren[i].getAttribute("required") != null){
+                var input = $("#" + formChildren[i].id).val();
+                if(!checkField(input)){
+                    $('label[for='+  formChildren[i].id  +']').addClass("required-field");
+                    msgOut.html(createDismissibleMessage("danger",title,msg));
+                    // return false;
+                    toReturn++;
+                }
+            }
+        }
+        return (toReturn > 0);
+    };
+
+    function checkField(input) {
+        return (input !== undefined && input !== null && input !== '');
+    }
+
 });
