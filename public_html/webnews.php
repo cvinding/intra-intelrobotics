@@ -84,3 +84,4 @@
 <script src="/js/helper.js"></script>
 <script src="/js/editnews.js"></script>
 <script src="/js/auth.js"></script>
+<script src="/js/deletenews.js"></script>
