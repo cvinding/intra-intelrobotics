@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-    function createEditNews(title, bodytext, author, date) {
+    function createEditNews(title, bodytext, author, date, id) {
 
         let cardtitle = document.createElement("h4");
         cardtitle.className = "card-title";
@@ -29,22 +29,22 @@ $(document).ready(function(){
         cardbody.className = "card-body";
 
         let deletebutton = document.createElement("button");
-        deletebutton.className = "btn btn-primary btn-sm";
+        deletebutton.className = "delete-news btn btn-primary btn-sm";
         deletebutton.type = "button";
         deletebutton.innerHTML = "Slet";
-        deletebutton.id = "delete";
+        deletebutton.id = "deletebutton-" + id;
         deletebutton.style.marginLeft = "1px";
-
+/*
         let editbutton = document.createElement("button");
         editbutton.className = "btn btn-primary btn-sm";
         editbutton.type = "button";
         editbutton.innerHTML = "Rediger";
         editbutton.id = "edit";
-
+*/
         let buttonrow = document.createElement("div");
         buttonrow.className = "row container";
 
-        buttonrow.appendChild(editbutton);
+        //buttonrow.appendChild(editbutton);
         buttonrow.appendChild(deletebutton);
 
 

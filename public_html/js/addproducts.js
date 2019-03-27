@@ -13,7 +13,7 @@ $(document).ready(function () {
 
             request("/api/info/createProduct", "POST", form.serialize() + "&webDomain=" + webdomain(), function (callback) {
 
-                uiBox.html(createDismissibleMessage("success", "Produkter er gemt", "Du gjorde det"))
+                uiBox.html(createDismissibleMessage("success", "Produktet er gemt", "Du gjorde det"))
 
                 form[0].reset();
             })

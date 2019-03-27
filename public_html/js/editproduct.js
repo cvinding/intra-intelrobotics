@@ -36,16 +36,18 @@ $(document).ready(function(){
         deletebutton.id = "delete";
         deletebutton.style.marginLeft = "1px";
 
+        /*
         let editbutton = document.createElement("button");
         editbutton.className = "btn btn-primary btn-sm";
         editbutton.type = "button";
         editbutton.innerHTML = "Rediger";
         editbutton.id = "edit";
+*/
 
         let buttonrow = document.createElement("div");
         buttonrow.className = "row container";
 
-        buttonrow.appendChild(editbutton);
+        //buttonrow.appendChild(editbutton);
         buttonrow.appendChild(deletebutton);
 
         cardbody.appendChild(cardtitle);
