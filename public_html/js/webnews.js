@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+    populate();
+
     function createEditNews(title, bodytext, author, date, id) {
 
         let cardtitle = document.createElement("h4");
@@ -17,8 +19,6 @@ $(document).ready(function(){
         let timebound = document.createElement("span");
         timebound.className = "spanright";
         timebound.innerText = date;
-
-
 
         let authorbound = document.createElement("span");
         authorbound.className= "spanleft";
@@ -64,51 +64,62 @@ $(document).ready(function(){
         return card;
     }
 
-    request("/api/info/getNews/50/300/" + webdomain(), "GET", "", function (result) {
 
-        const output = $("#editnews-output");
-        output.html("");
+    function populate() {
+        request("/api/info/getNews/50/300/" + webdomain(), "GET", "", function (result) {
+            const output = $("#editnews-output");
+            output.html("");
 
-        for (let i = 0; i<result.news["internal"].length; i++){
+            for (let i = 0; i<result.news["internal"].length; i++){
 
-            output.append(createEditNews(result.news["internal"][i].title, result.news["internal"][i].description, result.news["internal"][i].updated, result.news["internal"][i].author, result.news["internal"][i].id));
-        }
+                output.append(createEditNews(result.news["internal"][i].title, result.news["internal"][i].description, result.news["internal"][i].updated, result.news["internal"][i].author, result.news["internal"][i].id));
+            }
 
-        for (let i = 0; i<result.news["external"].length; i++){
+            for (let i = 0; i<result.news["external"].length; i++){
 
-            output.append(createEditNews(result.news["external"][i].title, result.news["external"][i].description, result.news["external"][i].updated, result.news["external"][i].author, result.news["external"][i].id));
-        }
+                output.append(createEditNews(result.news["external"][i].title, result.news["external"][i].description, result.news["external"][i].updated, result.news["external"][i].author, result.news["external"][i].id));
+            }
 
-        setOnClickEvent();
-    });
-
-    function showModal() {
-
-        $("#newsmodal").modal('show');
-
+            $(".delete-news").on("click", clickDeleteNews)
+        });
     }
 
-    function setOnClickEvent() {
-        $(".delete-news").click(function (e) {
-            e.preventDefault();
+    function showModal() {
+        $("#newsmodal").modal('show');
+    }
 
-            const id = $(this)[0].id;
+    function clickDeleteNews(e) {
+        e.preventDefault();
 
-            console.log(id);
+        const id = $(this)[0].id;
 
-            showModal();
+        showModal();
 
-            $("#delete-yes").click(function (e) {
-                e.preventDefault();
+        $("#delete-yes").attr("data-id", id.split("-")[1]);
+        $("#delete-yes").on("click", clickDeleteConfirm);
+    }
 
-                let newsid = id.split("-")[1];
+    function clickDeleteConfirm(e) {
+        e.preventDefault();
 
-                request("/api/info/deleteNews", "POST", "id=" + newsid, function (result) {
+        let newsID = $(this).attr("data-id");
 
+        request("/api/info/deleteNews", "POST", "id=" + newsID, function (result) {
 
-                });
+            $(".delete-news").off("click", clickDeleteNews);
+            $("#delete-yes").off("click", clickDeleteConfirm);
 
-            });
+            const uiBox =$(".UI-message");
+
+            if (result.status){
+                uiBox.html.createDismissibleMessage("success", "Gjort", "Nyheden er slettet");
+
+            }
+            if (!result.status){
+                uiBox.html.createDismissibleMessage("danger", "Fejl", "Nyheden er ikke blevet slettet");
+            }
+
+            populate()
         });
     }
 

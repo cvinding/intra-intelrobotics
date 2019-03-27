@@ -17,6 +17,7 @@
             <!-- Content -->
         </div>
         <div class="col-md-6" style="margin-top: 100px; margin-bottom: 100px">
+            <div class="UI-message"></div>
             <!-- Content -->
             <h1>Vis eller redigere nyheder</h1>
             <div id="editnews-output">
@@ -84,7 +85,7 @@
                     Er du sikker på du vil slette nyheden?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="delete-yes" class="btn btn-secondary" data-dismiss="modal">Ja</button>
+                    <button type="button" id="delete-yes" data-id="" class="btn btn-secondary" data-dismiss="modal">Ja</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Nej</button>
                 </div>
             </div>
