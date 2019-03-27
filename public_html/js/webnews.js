@@ -112,11 +112,11 @@ $(document).ready(function(){
             const uiBox =$(".UI-message");
 
             if (result.status){
-                uiBox.html.createDismissibleMessage("success", "Gjort", "Nyheden er slettet");
+                uiBox.html(createDismissibleMessage("success", "Gjort", "Nyheden er slettet"));
 
             }
             if (!result.status){
-                uiBox.html.createDismissibleMessage("danger", "Fejl", "Nyheden er ikke blevet slettet");
+                uiBox.html(createDismissibleMessage("danger", "Fejl", "Nyheden er ikke blevet slettet"));
             }
 
             populate()
