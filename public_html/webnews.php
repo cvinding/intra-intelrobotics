@@ -85,7 +85,7 @@
                     Er du sikker på du vil slette nyheden?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="delete-yes" data-id="" class="btn btn-secondary" data-dismiss="modal">Ja</button>
+                    <button type="button" id="deletenews-yes" data-id="" class="btn btn-secondary" data-dismiss="modal">Ja</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Nej</button>
                 </div>
             </div>

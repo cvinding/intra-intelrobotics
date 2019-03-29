@@ -20,6 +20,7 @@
             <!-- Content -->
         </div>
         <div class="col-md-6" style="margin-top: 100px; margin-bottom: 100px">
+            <div class="UI-message"></div>
             <!-- Content -->
             <h1>Vis eller redigere produkter</h1>
             <div id="product-output">
@@ -74,6 +75,26 @@
     </div>
 </div>
 
+    <div class="modal fade" id="productsmodal" tabindex="-1" role="dialog" aria-labelledby="modaltitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modaltitle">Sletning</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalbody">
+                    Er du sikker på du vil slette produktet?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="deleteproducts-yes" data-id="" class="btn btn-secondary" data-dismiss="modal">Ja</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Nej</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>
@@ -87,5 +108,5 @@
 <script src="libs/popper/popper.min.js"></script>
 <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/js/helper.js"></script>
-<script src="/js/editproduct.js"></script>
+<script src="/js/webproduct.js"></script>
 <script src="/js/auth.js"></script>

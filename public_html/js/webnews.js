@@ -95,8 +95,8 @@ $(document).ready(function(){
 
         showModal();
 
-        $("#delete-yes").attr("data-id", id.split("-")[1]);
-        $("#delete-yes").on("click", clickDeleteConfirm);
+        $("#deletenews-yes").attr("data-id", id.split("-")[1]);
+        $("#deletenews-yes").on("click", clickDeleteConfirm);
     }
 
     function clickDeleteConfirm(e) {
@@ -107,7 +107,7 @@ $(document).ready(function(){
         request("/api/info/deleteNews", "POST", "id=" + newsID, function (result) {
 
             $(".delete-news").off("click", clickDeleteNews);
-            $("#delete-yes").off("click", clickDeleteConfirm);
+            $("#deletenews-yes").off("click", clickDeleteConfirm);
 
             const uiBox =$(".UI-message");
 
