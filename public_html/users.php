@@ -26,11 +26,12 @@
             <div class="input-group" style="margin-top: 70px">
                 <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
                 <div class="input-group-append">
-                    <button class="btn btn-success" type="button">Søg</button>
+                    <button class="btn btn-success" id="searchbutton" data-id="" type="button">Søg</button>
                 </div>
             </div>
 
-            <textarea disabled class="form-control" id="exampleFormControlTextarea1" rows="5" style="margin-top: 100px; min-height: 300px" placeholder="Resultatet vises her"></textarea>
+            <!--<textarea disabled class="form-control" id="users-textbox" rows="5" style="margin-top: 100px; min-height: 300px" placeholder="Resultatet vises her"></textarea>-->
+            <div class="usersbox" id="users-textbox"></div>
         </div>
         <div class="col-md-2">
             <!-- Content -->
@@ -50,3 +51,5 @@
 <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/js/helper.js"></script>
 <script src="/js/auth.js"></script>
+<script src="/js/founduser.js"></script>
+
