@@ -6,6 +6,7 @@ $(document).ready(function () {
      */
 
     checkLogin();
+    checkAccess();
 
     setInterval(function () {
         console.log("checking login status...");
@@ -48,6 +49,20 @@ $(document).ready(function () {
         })
 
     }
+
+    function checkAccess() {
+
+        const pagename = window.location.href.split("/")[3];
+
+        request("/api/intra/checkAccess/" + pagename, "GET", "", function (result) {
+
+            if (result.accessible === false){
+
+                window.location.href = webURL() + "/news";
+            }
+        })
+    }
+
 
     $("#username").ready(function () {
         $("#username").html(getCookie("username"));

@@ -57,5 +57,6 @@
 <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/js/helper.js"></script>
 <script src="/js/auth.js"></script>
+<script src="/js/menu.js"></script>
 <script src="/js/addproducts.js"></script>
 
