@@ -44,7 +44,7 @@ $(document).ready(function () {
     function createMenuItem(page) {
 
         if(enviroment === "local"){
-            enviroment = "dk";
+            enviroment = "com";
         }
 
         let a = document.createElement("a");
