@@ -18,6 +18,7 @@
                 <div class="media-body login">
                     <h5 class="mt-0" style="text-align: center">Login</h5>
                     <form class="login">
+                        <div class="ui-message"></div>
                         <div class="form-group">
                             <label for="formGroupExampleInput">Brugernavn</label>
                             <input type="text" class="form-control" name="username-input" id="username-input" placeholder="Brugernavn">

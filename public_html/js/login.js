@@ -7,7 +7,7 @@ $(document).ready(function () {
         document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "login_status=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    }
+    }in
 
     /**
      * This is used for having a smooth animation on the scrollspy
@@ -48,6 +48,7 @@ $(document).ready(function () {
                 });
             },
             error: function (result) {
+                uiBox.html(createDismissibleMessage("danger", "Fejl!", "Forkert brugernavn eller kodeord"));
                 console.log(result);
             }
         });
